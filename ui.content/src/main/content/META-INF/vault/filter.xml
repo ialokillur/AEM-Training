@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <!-- mode="update": deploys/updates seed content but never deletes authored pages -->
+    <filter root="/content/employeehub" mode="update"/>
+    <filter root="/content/dam/employeehub" mode="update"/>
+    <filter root="/content/cq:tags/employeehub" mode="update"/>
+</workspaceFilter>

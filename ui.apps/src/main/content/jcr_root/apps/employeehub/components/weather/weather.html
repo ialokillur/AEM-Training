@@ -1,0 +1,24 @@
+<!--/* Weather Component — fetches live weather via Sling Servlet + OSGi Service */-->
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.js @ categories='employeehub.events'}"/>
+<div class="eh-weather" data-sly-use.model="com.abc.employeehub.core.models.WeatherComponentModel">
+    <div class="eh-weather__sky">
+        <span class="eh-weather__badge">Live</span>
+        <span class="eh-weather__glyph" aria-hidden="true">⛅</span>
+        <div class="eh-weather__sky-text">
+            <span class="eh-weather__label">${model.heading}</span>
+            <span class="eh-weather__hint">Real-time conditions</span>
+        </div>
+    </div>
+    <div class="eh-weather__body">
+        <div class="eh-weather__controls">
+            <input type="text" class="eh-weather__input" value="${model.city}" placeholder="Search a city…"/>
+            <button type="button" class="eh-weather__btn" aria-label="Get weather">
+                <span class="eh-weather__btn-text">Check</span>
+            </button>
+        </div>
+        <div class="eh-weather__result" aria-live="polite">
+            <p class="eh-weather__placeholder">Enter a city and tap Check to see current conditions.</p>
+        </div>
+    </div>
+</div>
