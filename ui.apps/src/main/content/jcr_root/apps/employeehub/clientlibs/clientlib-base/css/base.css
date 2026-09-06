@@ -18,6 +18,10 @@
     --eh-radius-lg: 20px;
 }
 
+body {
+    margin: 0;
+}
+
 /* Scope resets to page content only — global * breaks AEM authoring dialogs */
 .eh-page,
 .eh-page * {
@@ -109,12 +113,19 @@
     min-height: 50vh;
 }
 
-/* Main editable area width; header/hero/footer stay full width via component CSS */
+/* Root grid stays full width — it wraps header/hero/main/footer as siblings */
 .eh-page-main > div > .aem-Grid,
 .eh-page-main > div > .responsivegrid,
 .eh-page-main > .aem-Grid,
 .eh-page-main > .responsivegrid {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Only the nested "main" parsys column (the actual editable area) gets the capped width */
+.eh-page-main .aem-Grid > .responsivegrid.aem-GridColumn {
     max-width: 1140px;
     margin: 0 auto;
-    padding: 0 24px 48px;
+    padding: 24px 48px;
 }
