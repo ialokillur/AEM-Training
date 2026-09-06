@@ -20,7 +20,7 @@
 
 .eh-header .eh-container {
     max-width: none;
-    padding: 0;
+    padding: 1rem 24px;
 }
 
 .eh-header__logo {
@@ -140,7 +140,7 @@
 .eh-footer {
     background: var(--eh-secondary);
     color: var(--eh-white);
-    padding: 48px 0 24px;
+    padding: 48px 24px;
     margin-top: 0;
 }
 

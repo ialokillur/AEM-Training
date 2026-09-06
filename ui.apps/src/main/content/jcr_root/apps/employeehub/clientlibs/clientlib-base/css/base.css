@@ -42,7 +42,7 @@ body {
 .eh-container {
     max-width: 1140px;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 1rem 24px;
 }
 
 .eh-section {
